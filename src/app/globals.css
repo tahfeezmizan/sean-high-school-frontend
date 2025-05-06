@@ -1,0 +1,65 @@
+/* @import "tailwindcss"; */
+/* @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&display=swap'); */
+@import "tailwindcss";
+
+
+:root {
+  --background: #FFF;
+  --foreground: #171717;
+  --font-sans: "Rethink Sans", sans-serif;
+  --font-mono: var(--font-geist-mono); /* keep other font if needed */
+
+  /* setup gap  */
+  --section-gap-top: 2rem;   
+  --section-gap-bottom: 2rem; 
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+
+/* setup container for full content  */
+.custom-container{
+  max-width: 1580px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px  2rem;
+} 
+
+
+/* setup top, bottom gap for each section  */
+/* Responsive adjustments */
+@media (min-width: 640px) { 
+  :root {
+    --section-gap-top: 3rem;
+    --section-gap-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) { 
+  :root {
+    --section-gap-top: 4rem;
+    --section-gap-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1280px) { 
+  :root {
+    --section-gap-top: 5rem;
+    --section-gap-bottom: 5rem;
+  }
+}
+
+section {
+  padding-top: var(--section-gap-top) !important;
+  padding-bottom: var(--section-gap-bottom) !important;
+}
+
+.custom-ant-modal .ant-modal-body {
+  padding: 0 !important;
+}
+
+
